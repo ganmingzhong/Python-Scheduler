@@ -141,7 +141,7 @@ if __name__ == "__main__":
                 message=message + " " + coName_list[i]
 
     # Replace with your webhook URL
-    webhook_url = "https://hooks.slack.com/services/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"
+    webhook_url = os.getenv('SLACK_WEBHOOK_URL')
 
 
     send_slack_message(webhook_url, message)
