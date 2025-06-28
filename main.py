@@ -139,7 +139,7 @@ if __name__ == "__main__":
                 print("\nSymbol= "+coName_list[i])
                 print("\nSector= "+coType_list[i])
                 message=message + " " + coName_list[i]
-        break
+        
                 
 
     # Replace with your webhook URL
@@ -151,6 +151,6 @@ if __name__ == "__main__":
 
     #Your statements here
 
-    #stop = timeit.default_timer()
-    #print(message)
-    #print('Time: ', stop - start)
+    stop = timeit.default_timer()
+    print(message)
+    print('Time: ', stop - start)
