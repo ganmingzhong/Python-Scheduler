@@ -154,3 +154,8 @@ if __name__ == "__main__":
     stop = timeit.default_timer()
     print(message)
     print('Time: ', stop - start)
+
+        #- name: Push changes
+        #uses: ad-m/github-push-action@v0.6.0
+        #with:
+         # github_token: ${{ secrets.GITHUB_TOKEN }}

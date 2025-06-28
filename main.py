@@ -139,11 +139,11 @@ if __name__ == "__main__":
                 print("\nSymbol= "+coName_list[i])
                 print("\nSector= "+coType_list[i])
                 message=message + " " + coName_list[i]
-
+        break
                 
 
     # Replace with your webhook URL
-    webhook_url = os.getenv('SLACK_WEBHOOK_URL')
+    webhook_url = os.environ["SLACK_WEBHOOK_URL"]
 
 
     send_slack_message(webhook_url, message)
@@ -151,6 +151,6 @@ if __name__ == "__main__":
 
     #Your statements here
 
-    stop = timeit.default_timer()
-    print(message)
-    print('Time: ', stop - start)
+    #stop = timeit.default_timer()
+    #print(message)
+    #print('Time: ', stop - start)
