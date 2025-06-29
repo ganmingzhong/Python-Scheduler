@@ -117,7 +117,7 @@ if __name__ == "__main__":
 
     start = timeit.default_timer()
 
-    compName=pd.read_csv("C:\\Users\\User\\python project\\project 2_algotrading\\constituents.csv")
+    compName=pd.read_csv("constituents.csv")
 
 
     coName=compName["Symbol"]
