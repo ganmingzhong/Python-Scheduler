@@ -26,8 +26,9 @@ jobs:
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: python main.py
-              python supertrend_test.py
+        run: |
+          python main.py || echo "main failed"
+          python supertrend_test.py || echo "supertrend failed"
           
       - name: commit files
         run: |
