@@ -196,7 +196,7 @@ if __name__ == "__main__":
         
     
     #Replace with your webhook URL
-    #webhook_url = ""
+    #webhook_url = os.environ["SLACK_WEBHOOK_URL"]
     
     
     
