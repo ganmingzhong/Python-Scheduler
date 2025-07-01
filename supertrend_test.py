@@ -196,11 +196,11 @@ if __name__ == "__main__":
         
     
     #Replace with your webhook URL
-    #webhook_url = os.environ["SLACK_WEBHOOK_URL"]
+    webhook_url = os.environ["SLACK_WEBHOOK_URL"]
     
     
     
-    #send_slack_message(webhook_url, message)
+    send_slack_message(webhook_url, message)
 
 
     #Your statements here
