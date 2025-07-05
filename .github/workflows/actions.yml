@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '10 * * * *'
+    - cron: '* 13 * * *'
 
 jobs:
   build:
@@ -30,6 +30,7 @@ jobs:
           python main.py || echo "main failed"
           python supertrend_us.py || echo "supertrend failed"
           python supertrend_my.py || echo "supertrend failed"
+          python vegas_my.py || echo "vegas failed"
 
       - name: Wait 30 minutes
         run: |
