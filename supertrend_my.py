@@ -142,7 +142,7 @@ def generate_signals(df):
 
 def trigger(df):
     if(df['signals'].iloc[-1]==1 and df['signals'].iloc[-2]==-1):
-        if(df['ema_50'].iloc[-1]>df['ema_200'].iloc[-1]):
+        if(df['ema_50'].iloc[-1]>df['ema_200'].iloc[-1] and df['close']>0.5):
             return True
         else:
             return False
@@ -165,7 +165,7 @@ if __name__ == "__main__":
 
     coSymbol=compName["code"]
     coName=compName["name"] 
-    message="Supertrend Stocks: "
+    message="Supertrend My Stocks: "
 
     coName_list=coName.tolist()
     coSymbol_list=coSymbol.tolist()
@@ -213,7 +213,7 @@ if __name__ == "__main__":
 
 
     #Replace with your webhook URL
-    webhook_url = ""
+    webhook_url = os.environ["SLACK_WEBHOOK_URL"]
 
 
 
