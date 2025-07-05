@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
     coName=compName["Symbol"]
     coType=compName["GICS Sector"]
-    message="Stocks: "
+    message="Vegas Stocks: "
 
     coName_list=coName.tolist()
     coType_list=coType.tolist()
