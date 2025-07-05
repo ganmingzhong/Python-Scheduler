@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '0 13 * * *'
+    - cron: '10 * * * *'
 
 jobs:
   build:
@@ -28,7 +28,13 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
           python main.py || echo "main failed"
-          python supertrend_test.py || echo "supertrend failed"
+          python supertrend_us.py || echo "supertrend failed"
+          python supertrend_my.py || echo "supertrend failed"
+
+      - name: Wait 30 minutes
+        run: |
+          echo "Sleeping for 30 minutes..."
+          sleep 1800  # 1800 seconds = 30 minutes
           
       - name: commit files
         run: |
