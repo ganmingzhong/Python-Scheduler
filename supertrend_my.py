@@ -42,7 +42,7 @@ def send_slack_message(webhook_url, message):
 def get_data(name):
     # Calculate the date range for the months
     end_date = datetime.today()
-    start_date = end_date - timedelta(days=1000)
+    start_date = end_date - timedelta(days=2000)
     df = yf.download(name, start=start_date, end=end_date, auto_adjust=True)[['High','Close','Low']]
 
     # Flatten MultiIndex columns if they exist
