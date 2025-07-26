@@ -116,7 +116,7 @@ if __name__ == "__main__":
 
     coSymbol=compName["code"]
     coName=compName["name"] 
-    message="Stocks: "
+    message="Stocks Vegas My: "
 
     coName_list=coName.tolist()
     coSymbol_list=coSymbol.tolist()
