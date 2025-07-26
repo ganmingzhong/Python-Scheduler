@@ -162,7 +162,7 @@ if __name__ == "__main__":
     
     coName=compName["Symbol"]
     coType=compName["GICS Sector"]
-    message="Stocks: "
+    message="Supertrend Stocks US: "
     
     coName_list=coName.tolist()
     coType_list=coType.tolist()
